@@ -50,6 +50,7 @@ public class stepDefinitions extends Utils {
 
     @Given("Add Login Payload with  {string} {string}")
     public void add_login_payload_with(String username, String password) throws IOException {
+        System.out.println("Just to check Git commands!!");
         TestData td=new TestData();
         reqLogin = given().relaxedHTTPSValidation().header("Content-Type", "application/json; charset=UTF-8").spec(commonForAll()).body(td.loginPayload(username,password));
     }
