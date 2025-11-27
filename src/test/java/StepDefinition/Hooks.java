@@ -11,6 +11,7 @@ public class Hooks
 {
     @After("@Tagging")
     public void  afterScenario() throws IOException {
+        System.out.println("I have been inserted into Apiframework!!");
         System.out.println("I am from hook class");
         stepDefinitions sd=new stepDefinitions() ;
         sd.add_login_payload_with(Utils.currentUsername,Utils.currentPassword);
